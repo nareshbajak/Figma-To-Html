@@ -1,0 +1,261 @@
+@media (min-width: 1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1280px;
+    }
+
+    .container-fluid {
+        min-width: 1440px;
+    }
+}
+
+@media(max-width:1400px) and (min-width:1280px) {
+    .hero-left {
+        height: 450px;
+        width: 550px;
+        padding-left: 40px;
+    }
+
+    .hero-right,
+    .hero-right img {
+        height: 450px;
+        width: 600px;
+    }
+
+    .hero-left h3 {
+        font-size: 20px;
+    }
+
+    .hero-left h2 {
+        font-size: 30px;
+    }
+
+    .hero-left p {
+        font-size: 14px;
+    }
+
+    .hero-btn {
+        height: 40px;
+        width: 135px;
+    }
+    .arrow-right{
+        margin-left: 470px;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    .hero-right,
+    .hero-left,
+    .hero-right img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1199.93px) {
+
+    .hero-right,
+    .hero-left,
+    .hero-right img {
+        height: auto;
+        width: 100%;
+    }
+
+    /* product-section start */
+    .product-card {
+        height: 250px;
+        width: 250px;
+    }
+
+    .product-card img {
+        margin-left: 58px;
+        height: 100px;
+        width: 90px;
+    }
+
+    .product-card .doll-img {
+        height: 100px;
+        width: 110px;
+        margin-left: 55px;
+    }
+
+    .product-card h2 {
+        font-size: 14px;
+    }
+
+    /* product-section end */
+
+}
+
+@media (max-width: 1024.93px) {
+
+    /* product-section start */
+    .product-card {
+        height: 200px;
+        width: 200px;
+    }
+
+    .product-card img {
+        margin-left: 48px;
+        height: 80px;
+        width: 70px;
+    }
+
+    .product-card h6 {
+        font-size: 14px;
+    }
+
+    .product-card p {
+        font-size: 10px;
+    }
+
+    .product-card .doll-img {
+        height: 80px;
+        width: 90px;
+        margin-left: 35px;
+    }
+
+    .product-card h2 {
+        font-size: 12px;
+    }
+
+    .card-arrow {
+        height: 18px;
+        width: 18px;
+    }
+
+    .card-arrow i {
+        font-size: 10px;
+    }
+
+    /* product-section end */
+}
+
+@media (max-width: 992px) {
+
+    .search-bar,
+    .hr-line {
+        display: none;
+    }
+
+    .logo-img img {
+        height: 40px;
+    }
+
+    .left-section,
+    .right-section {
+        background-color: green;
+        display: none !important;
+    }
+}
+
+@media (max-width: 912.93px) {}
+
+@media (max-width: 768.93px) {
+
+    /* product-section start */
+    .product-card {
+        height: 170px;
+        width: 170px;
+    }
+
+    .product-card img {
+        margin-left: 34px;
+        height: 60px;
+        width: 70px;
+    }
+
+    .product-card h6 {
+        font-size: 12px;
+    }
+
+    .product-card p {
+        font-size: 8px;
+    }
+
+    .product-card .doll-img {
+        height: 60px;
+        width: 70px;
+        margin-left: 34px;
+    }
+
+    .product-card h2 {
+        font-size: 10px;
+    }
+
+    .card-arrow {
+        height: 14px;
+        width: 14px;
+    }
+
+    .card-arrow i {
+        font-size: 8px;
+    }
+
+    /* product-section end */
+}
+
+@media (max-width: 540.93px) {
+    .product-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .product-title h3 {
+        font-size: 30px;
+    }
+
+    .product-title p {
+        font-size: 10px;
+    }
+
+    .product-btn {
+        height: 29px;
+        width: 130px;
+        border-radius: 60px;
+        border: none;
+        font-size: 10px;
+    }
+
+    .product-btn2 {
+        height: 29px;
+        width: 96px;
+        font-size: 10px;
+        border: 1px solid #262626;
+        border-radius: 60px;
+    }
+}
+
+@media (max-width: 430.93px) {
+    .product-btn {
+        height: 24px;
+        width: 100px;
+        border-radius: 60px;
+        border: none;
+        font-size: 7px;
+    }
+
+    .product-btn2 {
+        height: 24px;
+        width: 80px;
+        font-size: 7px;
+        border: 1px solid #262626;
+        border-radius: 60px;
+    }
+}
+
+@media (max-width: 415.93px) {}
+
+@media (max-width: 390.93px) {}
+
+@media (max-width: 375.93px) {}
+
+@media (max-width: 344.93px) {}

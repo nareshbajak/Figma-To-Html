@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Full Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* =========================
+       1. GRID CONTAINER SETUP
+       ========================= */
+        .container {
+            display: grid;
+            /* Grid चालू */
+
+            /* तीन column बनाए: 
+         1st column fix = 200px
+         2nd & 3rd column responsive (1fr 1fr) */
+            grid-template-columns: 200px 1fr 1fr;
+
+            /* तीन row बनाए: 
+         top = auto (header)
+         middle = 1fr (main content)
+         bottom = auto (footer) */
+            grid-template-rows: auto 1fr auto;
+
+            /* Items के बीच gap */
+            gap: 10px;
+
+            /* Layout areas define करना */
+            grid-template-areas:
+                "header header header"
+                "sidebar content ads"
+                "footer footer footer";
+
+            min-height: 100vh;
+            /* पूरी screen की height */
+        }
+
+        /* =========================
+       2. GRID AREAS (Named Items)
+       ========================= */
+
+        .header {
+            grid-area: header;
+            /* ऊपर वाला हिस्सा */
+            background: lightcoral;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            /* बाईं तरफ */
+            background: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            grid-area: content;
+            /* बीच का हिस्सा */
+            background: lightgreen;
+
+            /* Nested Grid (content के अंदर small boxes) */
+            display: grid;
+
+            /* Responsive columns:
+         min width = 150px 
+         max width = 1fr 
+         auto-fit = जितना space होगा उतने boxes fit होंगे */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .ads {
+            grid-area: ads;
+            /* दाईं तरफ */
+            background: gold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer {
+            grid-area: footer;
+            /* सबसे नीचे */
+            background: lightpink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* =========================
+       3. CONTENT AREA (Nested Grid Items)
+       ========================= */
+        .content div {
+            background: white;
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* =========================
+       4. RESPONSIVE DESIGN
+       ========================= */
+        @media(max-width: 768px) {
+            .container {
+                /* Mobile में layout बदल जाएगा (stack layout) */
+                grid-template-areas:
+                    "header"
+                    "content"
+                    "sidebar"
+                    "ads"
+                    "footer";
+
+                /* अब सिर्फ 1 column */
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- GRID CONTAINER -->
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header">Header (Full Width)</div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">Sidebar</div>
+
+        <!-- MAIN CONTENT (Nested Grid Boxes) -->
+        <div class="content">
+            <div>Box 1</div>
+            <div>Box 2</div>
+            <div>Box 3</div>
+            <div>Box 4</div>
+            <div>Box 5</div>
+            <div>Box 6</div>
+        </div>
+
+        <!-- ADS SECTION -->
+        <div class="ads">Ads Section</div>
+
+        <!-- FOOTER -->
+        <div class="footer">Footer (Full Width)</div>
+
+    </div>
+
+</body>
+
+</html>
